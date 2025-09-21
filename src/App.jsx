@@ -4,6 +4,7 @@ import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Country } from "./pages/Country";
 import { Contact } from "./pages/Contact";
+import { AppLayout } from "./components/Layout/AppLayout";
 
 const router = createBrowserRouter([
   {
