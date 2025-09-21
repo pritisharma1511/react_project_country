@@ -6,22 +6,28 @@ import { Country } from "./pages/Country";
 import { Contact } from "./pages/Contact";
 
 const router = createBrowserRouter([
-    {
+  {
+    path: "/",
+    element: <AppLayout />,
+    children: [
+      {
         path: "/",
         element: <Home />
-    },
-    {
-        path: "/about",
+      },
+      {
+        path: "about",
         element: <About />
-    },
-    {
-        path: "/country",
+      },
+     {
+        path: "country",
         element: <Country />
-    },
+     },
     {
-        path: "/contact",
+        path: "contact",
         element: <Contact />
-    }
+      }
+    ]
+  }
 ]);
 
 const App = () => {
