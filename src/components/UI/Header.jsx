@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 
-export const Headers = () => {
+export const Header = () => {
   const [show, setShow] = useState(false);
 
   const handleButtonToggle = () => {
