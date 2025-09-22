@@ -1,5 +1,6 @@
 import {  useEffect, useTransition,useState } from "react";
 import { getCountryData } from "../api/postApi";
+import { Loader } from "../components/UI/Loader";
 
 export const Country = () => {
   const [isPending, startTransition] = useTransition();
@@ -13,6 +14,10 @@ export const Country = () => {
             setCountries(res.data);
         });
     }, []);
-    if (isPending) return <h1>Loading...</h1>;
-    return <h1>Country Page</h1>;
+    if (isPending) return <Loader />;
+
+    return <section className="country-section">
+        <ul className="grid grid-four-cols">
+            countries.map((country) => (
+                return<CountryCard key={country.name.common} country={country} />
 };
